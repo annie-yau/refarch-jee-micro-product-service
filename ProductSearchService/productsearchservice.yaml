@@ -13,13 +13,13 @@ spec:
     spec:
       containers:
         - name: productsearchservice
-          image: productsearchservice
+          image: mycluster.icp:8500/<your-username>/productsearchservice
           ports:
           - containerPort: 9443
           - containerPort: 9080
           env:
           - name: EJBServiceIP
-            value: "169.44.18.102"
+            value: "<your-host-ip>"
 ---
 apiVersion: v1
 kind: Service
