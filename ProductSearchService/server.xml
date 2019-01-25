@@ -42,7 +42,7 @@
 		          httpPort="9080"
                   httpsPort="9443" />
 
-    <application id="ProductSearchService" name="ProductSearchService" type="war" location="/config/apps/ProductSearchService.war">
+    <application id="ProductSearchService" name="ProductSearchService" type="war" location="${server.config.dir}/apps/ProductSearchService.war">
       <application-bnd>
 	<security-role name="SecureShopper">
 	  <user name="rbarcia" />
