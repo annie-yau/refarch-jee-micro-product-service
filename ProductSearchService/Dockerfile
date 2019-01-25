@@ -1,10 +1,7 @@
-FROM websphere-liberty:kernel
+FROM websphere-liberty
 
-COPY target/ProductSearchService-0.1.war /opt/ibm/wlp/usr/servers/defaultServer/dropins/
+COPY target/ProductSearchService-0.1.war /opt/ibm/wlp/usr/servers/defaultServer/apps/ProductSearchService.war
 COPY server.xml /opt/ibm/wlp/usr/servers/defaultServer/
-COPY GeneratedSSLInclude.xml /opt/ibm/wlp/usr/servers/defaultServer/
-COPY ltpa.keys /opt/ibm/wlp/usr/servers/defaultServer/
-COPY key.jks /opt/ibm/wlp/usr/servers/defaultServer/resources/security/
 
 RUN  installUtility install --acceptLicense defaultServer
 
